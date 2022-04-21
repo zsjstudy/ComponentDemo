@@ -45,9 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//    implementation 'com.github.zsjstudy.ComponentDemo:model_home:1.0.2'
-    implementation 'com.github.zsjstudy:ComponentDemo:1.0.2'
+//    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.0'
+    implementation 'com.github.zsjstudy:ComponentDemo:1.0.0'
 //    implementation project(path: ':model_home')
-
-//    implementation 'com.github.zsjstudy.ASFrame:AFramework:1.0.1'
 }
