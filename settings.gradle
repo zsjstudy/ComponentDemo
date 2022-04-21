@@ -1,3 +1,4 @@
+include ':model_cart'
 include ':model_commen'
 include ':model_home'
 include ':app'

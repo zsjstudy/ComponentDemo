@@ -3,11 +3,6 @@ plugins {
     id 'kotlin-android'
 }
 
-// JitPack Maven
-apply plugin: 'com.github.dcendents.android-maven'
-// Your Group
-group='com.github.zsjstudy'
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -20,6 +15,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        //路由需要配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -43,11 +45,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //路由
-    api 'com.alibaba:arouter-api:1.4.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.0'//业务组件依赖common组件
 }

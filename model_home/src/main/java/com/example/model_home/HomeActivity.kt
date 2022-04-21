@@ -1,11 +1,20 @@
 package com.example.model_home
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.example.model_commen.BaseActivity
+import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+class HomeActivity : BaseActivity() {
+
+    override fun getContentView(): Int {
+        return R.layout.activity_home
+    }
+
+    override fun initData() {
+        main_text_click.setOnClickListener {
+
+        }
+    }
+
+    override fun initView() {
     }
 }
