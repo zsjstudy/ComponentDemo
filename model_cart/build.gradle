@@ -1,10 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    // JitPack Maven
+    id 'com.github.dcendents.android-maven'
+    id 'kotlin-kapt'
 }
 
-// JitPack Maven
-apply plugin: 'com.github.dcendents.android-maven'
 // Your Group
 group='com.github.zsjstudy'
 
@@ -45,6 +46,14 @@ android {
     }
 }
 
+//路由需要配置
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -56,6 +65,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
-    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.0'//业务组件依赖common组件
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.2'//业务组件依赖common组件
 }
