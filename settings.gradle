@@ -1,0 +1,4 @@
+include ':model_commen'
+include ':model_home'
+include ':app'
+rootProject.name = "ComponentDemo"
