@@ -66,5 +66,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
-    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.2'//业务组件依赖common组件
+    implementation 'com.github.zsjstudy.ComponentDemo:model_commen:1.0.0'//业务组件依赖common组件
 }
